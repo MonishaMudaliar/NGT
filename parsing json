@@ -1,0 +1,95 @@
+//chatgpt 
+
+<html>
+<head>
+  <title>JSON Program</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var data = {
+      "Name": "JSON",
+      "Sem": 5,
+      "Type": "Programming"
+    };
+
+    document.writeln("<p>" + data["Name"] + "</p>");
+    document.writeln("<p>" + data["Sem"] + "</p>");
+
+    for (var key in data) {
+      document.write("<br/>" + key);
+    }
+
+    var json_obj = JSON.parse(JSON.stringify(data), function (name, value) {
+      if (name.toLowerCase() === "sem") {
+        return undefined;
+      } else {
+        return value;
+      }
+    });
+
+    for (var key in json_obj) {
+      document.write("<br/>" + key);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//original
+
+<html>
+<head>
+<title>JSON Program</title>
+</head>
+<body>
+<script type= "text/javascript">
+var data = 
+{
+  "Name" : "JSON",
+  "Sem" : 5,
+  "Type" : "Programming"
+};
+document.writeln("<n1>" + data.name + "<n1><br/>");
+var json_obj = JSON.parse(data, function(name,value)
+{
+return value;
+});
+document.writeln(json_obj.name);
+for(key in json_obj)
+{
+  document.write("<br/>" + key);
+}
+var json_obj = JSON.parse(data, function(name, value)
+{
+  if (name == "sem")
+  {
+    return undefined;
+  }
+  else
+  {
+    return value;
+  }
+});
+for(key in json_obj)
+{
+  document.write(<"br/"> + key);
+}
+</script>
+</body>
+</html>
