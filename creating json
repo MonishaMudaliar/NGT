@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>JSON Program</title>
+</head>
+<body>
+<script type= "text/javascript">
+var data = 
+{
+  "Bname" : "JSON",
+  "Publisher" : "Tata MCgrow",
+  "Author" : "Smith",
+  "Price" : 250,
+  "ISBN" : "123456788910112"
+};
+document.writeln(JSON.Stringify(data));
+document.written(JSON.Stringify(data, ["Bname","Publisher","Author"]));
+document.writeln(JSON.Stringify(data, ["Bname","Publisher","Author"],5));
+</script>
+</body>
+</html>
